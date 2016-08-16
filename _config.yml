@@ -8,12 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : Cube's blog
+tagline: A personal blog about whatever interesting/weird stuff I happen to be doing.
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
+  name : Samuel Hodgkins
+  email : samuel.hodgkins@sky.com
+  github : samis
   twitter : username
   feedburner : feedname
 
@@ -25,7 +25,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://samis.github.io
 
 gems: ["jekyll-sitemap"]
 
@@ -84,35 +84,16 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
-    duoshuo :
-      short_name : jekyllbootstrap
+      short_name : cube-blog
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google
-    gauges :
-        site_id : 'SITE ID'
-    google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
+    provider : piwik
     piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        baseURL : 'piwik-storagecube.rhcloud.com' # Piwik installation address (without protocol)
         idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
