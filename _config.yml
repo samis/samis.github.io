@@ -5,6 +5,7 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
 
+paginate:         1
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
@@ -27,7 +28,7 @@ author :
 #
 production_url : http://samis.github.io
 
-gems: ["jekyll-sitemap"]
+gems: ["jekyll-sitemap", "jekyll-paginate"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
