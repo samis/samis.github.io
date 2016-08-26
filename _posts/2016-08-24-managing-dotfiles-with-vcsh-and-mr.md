@@ -56,24 +56,29 @@ However, should you not want to read any of the above links I will attempt to gi
 5. Commit to the vcsh repository and push both sets of changes as needed.
 
 # Updating an existing repository
+
 1. You can prefix git operations with vcsh and then the repo name to perform them on the repository.
 2. Alternatively, use 'vcsh enter' to go into an environment where git can be used normally.
 
 # Updating *all* the repositories 
+
 1. Use `mr up` and let myrepos do the job it was designed to do.
 
 # Bootstrapping the dotfiles
 (presuming git is installed. If not, install it.)
+
 1. Install myrepos and vcsh. If there's no distribution package, a manual install is easy (they're just standalone scripts)
 2. Obtain your myrepos configuration.
 3. Use `mr up` and let myrepos obtain all your repositories as needed.
 
 If you think the above workflow looks interesting, I recommend you have a nice read of the above links - especially the last one
 as I found it very useful. However, I have not moved my entire collection of dotfiles over and yet I still have some interesting problems/caveats to tackle.
+
 Firstly, while using a (private) Git repository to track my SSH/GPG data is useful, certain files have special filesystem permissions which Git does not preserve. While this can be solved with a chmod or two, it may grow
 to be more difficult if I need more of these files in the future - plus I might be able to automate it using mr's 'fixups' functionality.
-Secondly, this is more of an observation than a problem: I'm currently using Apache-style configuration involving both 'available.d' and 'config.d'. This works and is flexible, but it'd be simpler
-to only have a single directory and have equivalent information be part of the configuration itself.
-Thirdly, bootstrapping from a completely clean slate is rather complicated. Certain repositories may depend on others to work / be in the correct location. Then there's the problem of access to private repositories, perhaps HTTP(s) could be used to download SSH keys using pre-entered cached credentials? A similar but lesser problem exists with GPG. Public repositories have no issues with this - if need be, they can have the master remote be changed afterwards.
+
+Secondly, this is more of an observation than a problem: I'm currently using an Apache-style configuration involving both *'available.d'* and *'config.d'*. This works and is flexible, but it'd be simpler to only have a single directory and have equivalent information be part of the configuration itself.
+
+Thirdly, bootstrapping from a completely clean slate is rather complicated. Certain repositories may depend on others to work / be in the correct location. Then there's the problem of access to private repositories, perhaps HTTP(s) could be used to download SSH keys using pre-entered cached credentials? A similar but lesser problem exists with GPG. Public repositories have no issues with this - if need be, they can have the master remote be changed afterwards.s
 
 Anyway, that's all for now. If and when I solve the above issues I'll make sure to explain and blog about each my solutions. Until then, I don't expect this to come up again.
