@@ -33,7 +33,7 @@ This step was also rather easy, a bit of copying files around and a few commands
 Now that I had selected my profile, I needed to update my system to include the changed settings/flags that came with the new profile.
 Additionally, I needed to install the additional software selected to my profile. 
 In short, what I (or Gentoo's portage) actually did could be succinctly explained with this image:
-![https://cdn.meme.am/instances/500x/71652744.jpg]()
+![COMPILE ALL THE THINGS](https://cdn.meme.am/instances/500x/71652744.jpg)
 I expected that this would be the longest part of the installation, and that was a correct expectation. Compiling 164 packages does take some time.
 However, it didn't take as much time as I imagined it to, things felt pretty fast actually. Building a generic linux kernel from scratch and installing it only took ~1h. 
 I attribute this unexpected speediness to the benefits of passing `-j5` to make - Allowing 4 files to be compiled at once while using an entire CPU core speeded things up very nicely, while a 5th task meant there was almost always something to do when it was otherwise idle.
